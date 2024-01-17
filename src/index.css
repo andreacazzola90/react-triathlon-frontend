@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-7xl px-8;
+  }
+}
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --rounded-btn: 0
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html,
+body {
+  @apply bg-white;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+html {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: url(/dotted-square.svg);
+    position: absolute;
+    display: block;
+    width: 150px;
+    pointer-events: none;
+  }
+
+  &:before {
+    top: 5%;
+
+  }
+
+  &:after {
+    right: 0;
+    bottom: 5%;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.input,
+select {
+  @apply w-full border-black;
+
+  &:focus {
+    @apply outline-none border-black
+  }
+}
+
+.btn {
+  @apply uppercase border-none text-2xl min-w-60;
+
+  &.btn-accent {
+    @apply bg-black text-white;
+  }
+}
+
+.form-group {
+  label {
+    @apply block text-black font-bold mb-1 pr-4 uppercase;
+
+    &.required:after {
+      content: " *";
+      color: red;
+    }
+  }
+
+  input,
+  select {
+    @apply uppercase;
+
+    &[type='checkbox'] {
+      background-color: #f1eee9;
+    }
+  }
+
+}
+
+#qrCodeimage {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.headerOutline {
+  opacity: 0.5;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #df3012;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%)translateY(-50%);
+  overflow: hidden;
+}
