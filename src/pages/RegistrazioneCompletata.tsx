@@ -15,7 +15,7 @@ export default function Registrazione() {
   useEffect(() => {
     if (isQrCodeView == "true") {
       setShowQRCode(true);
-      deleteCookie("isQrCodeView");
+      //deleteCookie("isQrCodeView");
     } else {
       navigate("/registrazione");
     }
@@ -24,7 +24,7 @@ export default function Registrazione() {
   }, []);
 
   const imgQrCode = (
-    <div className="d-flex justify-center max-w-full">
+    <div className="d-flex justify-center max-w-full w-56">
       <QRCode
         id="qrCodeimage"
         value={initSku}
@@ -38,7 +38,7 @@ export default function Registrazione() {
     var canvas: any = document.getElementById("qrCodeimage");
     var url = canvas.toDataURL("image/png");
     var link = document.createElement("a");
-    link.download = "filename.png";
+    link.download = "data-luogo.png";
     link.href = url;
     link.click();
   };
@@ -48,15 +48,25 @@ export default function Registrazione() {
       {showQRCode && (
         <>
           <Logo />
-          <HeaderTitle
-            title="Welcome runner!"
-            description="ciao <span class='text-red'>come stai</span><br /> io molto bene"
-          />
-
+          <HeaderTitle title="Welcome to" />
+          <p>Ciao "Nome"</p>
+          <p>TI ASPETTIAMO IN "DATA"</p>
+          <p>"NOME EVENTO" "LUOGO"</p>
+          <p>
+            <b>Mostra IL QR-CODE</b> agli stand e vivi una{" "}
+            <b>nuova esperienze di corsa.</b>
+          </p>
+          <img src="/the-running-lab-logo.svg" className={"py-5 w-44"}></img>
           {imgQrCode}
 
-          <button onClick={() => downloadQrCode()} className="btn">
+          <button onClick={() => downloadQrCode()} className="btn uppercase">
             Download QR-code
+          </button>
+          <button onClick={() => downloadQrCode()} className="btn uppercase">
+            Prenota la scarpa per la gara
+          </button>
+          <button onClick={() => downloadQrCode()} className="btn uppercase">
+            iscriviti alle attivià speciali
           </button>
         </>
       )}
