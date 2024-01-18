@@ -1,7 +1,6 @@
-"use client";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { setCookie } from "cookies-next";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 import { v4 } from "uuid";
 import * as yup from "yup";
@@ -36,8 +35,6 @@ export default function Registrazione() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
-    control,
   } = useForm({ resolver: yupResolver(schema) });
   const navigate = useNavigate();
   const skuCreate = v4();

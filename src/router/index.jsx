@@ -4,6 +4,7 @@ import LayoutPrivate from "../layouts/LayoutPrivate";
 import LayoutRoot from "../layouts/LayoutRoot";
 
 import Dashboard from "../pages/Dashboard";
+import Profilo from "../pages/Profilo";
 import Registrazione from "../pages/Registrazione";
 import RegistrazioneCompletata from "../pages/RegistrazioneCompletata";
 import Home from "../pages/Home";
@@ -48,6 +49,16 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <RegistrazioneCompletata />,
+      },
+    ],
+  },
+  {
+    path: "/profilo/:id",
+    element: <LayoutRoot />,
+    children: [  
+      {
+        index: true,
+        element: <Profilo />,
       },
     ],
   }

@@ -59,14 +59,23 @@ export default function Registrazione() {
           <img src="/the-running-lab-logo.svg" className={"py-5 w-44"}></img>
           {imgQrCode}
 
-          <button onClick={() => downloadQrCode()} className="btn uppercase">
+          <button
+            onClick={() => downloadQrCode()}
+            className="btn uppercase btn-dark max-w-32 my-5"
+          >
             Download QR-code
           </button>
-          <button onClick={() => downloadQrCode()} className="btn uppercase">
-            Prenota la scarpa per la gara
+          <button
+            onClick={() => downloadQrCode()}
+            className="btn uppercase btn-light max-w-32  mb-5"
+          >
+            Prenota la scarpa
           </button>
-          <button onClick={() => downloadQrCode()} className="btn uppercase">
-            iscriviti alle attivià speciali
+          <button
+            onClick={() => downloadQrCode()}
+            className="btn uppercase btn-light max-w-32  mb-5"
+          >
+            iscriviti alle attivià
           </button>
         </>
       )}

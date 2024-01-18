@@ -1,0 +1,70 @@
+{
+  "createdAt": "2024-01-03T17:11:05.348Z",
+  "name": "andrea",
+  "sku": "793a11fa-83d5-423d-a2e3-24f0b71dfa13",
+  "surname": "cazzola",
+  "email": "andreacazzola90@gmail.com",
+  "phone": 3402324182,
+  "privacyAccept": true,
+  "dateOfBirth": 1704298266,
+  "weight": 3,
+  "athleteLevel": "athleteLevel 60",
+  "goal": "goal 60",
+  "id": "60",
+  "gare": [
+    {
+      "title": "Gare 1",
+      "data": "11-2-2023",
+      "report": {
+        "createdAt": "2024-01-03T17:11:05.348Z",
+        "name": "andrea",
+        "sku": "793a11fa-83d5-423d-a2e3-24f0b71dfa13",
+        "surname": "cazzola",
+        "email": "andreacazzola90@gmail.com",
+        "phone": 3402324182,
+        "privacyAccept": true,
+        "dateOfBirth": 1704298266,
+        "weight": 3,
+        "athleteLevel": "athleteLevel 60",
+        "goal": "goal 60",
+        "id": "60"
+      }
+    },
+    {
+      "title": "Gare 1",
+      "data": "11-2-2023",
+      "report": {
+        "createdAt": "2024-01-03T17:11:05.348Z",
+        "name": "andrea",
+        "sku": "793a11fa-83d5-423d-a2e3-24f0b71dfa13",
+        "surname": "cazzola",
+        "email": "andreacazzola90@gmail.com",
+        "phone": 3402324182,
+        "privacyAccept": true,
+        "dateOfBirth": 1704298266,
+        "weight": 3,
+        "athleteLevel": "athleteLevel 60",
+        "goal": "goal 60",
+        "id": "60"
+      }
+    },
+    {
+      "title": "Gare 1",
+      "data": "11-2-2023",
+      "report": {
+        "createdAt": "2024-01-03T17:11:05.348Z",
+        "name": "andrea",
+        "sku": "793a11fa-83d5-423d-a2e3-24f0b71dfa13",
+        "surname": "cazzola",
+        "email": "andreacazzola90@gmail.com",
+        "phone": 3402324182,
+        "privacyAccept": true,
+        "dateOfBirth": 1704298266,
+        "weight": 3,
+        "athleteLevel": "athleteLevel 60",
+        "goal": "goal 60",
+        "id": "60"
+      }
+    }
+  ]
+}

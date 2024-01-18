@@ -1,10 +1,11 @@
-"use client";
 import { useEffect, useState } from "react";
 import Property from "./Property";
+import Profile from "../utils/profilo-gare.json";
+import TableProperty from "./TableProperty";
 
 const UserProfile = ({ id }: { id: string }) => {
   const [user, setUser] = useState({});
-  const apiUrl = process.env.NEXT_PUBLIC_API_HOST + "users/" + id;
+  const apiUrl = import.meta.env.VITE_API_HOST + "users/" + id;
   useEffect(() => {
     if (id) {
       fetchData();
@@ -33,9 +34,32 @@ const UserProfile = ({ id }: { id: string }) => {
     }
   };
 
+  const gare = Profile.gare;
+
   return (
-    <main className="flex flex-col items-center">
-      <Property data={user}></Property>
+    <main className="">
+      <div className="bg-black w-full flex flex-col items-center ">
+        <img src="/the-running-lab-logo-white.svg" className="py-5 w-64"></img>
+        <h1 className="text-3xl font-bold text-white uppercase">Report</h1>
+      </div>
+
+      <div className="profile flex flex-row gap-4 items-center justify-center py-5 uppercase">
+        <div className="p-5 bg-white shadow">
+          <span>
+            <b>{user.name}</b>
+          </span>
+        </div>
+        <div className="p-5 bg-white shadow">
+          <span>
+            <b>{user.surname}</b>
+          </span>
+        </div>
+      </div>
+
+      {/* <Property data={user}></Property> */}
+      {gare.map((p) => (
+        <TableProperty data={p}></TableProperty>
+      ))}
     </main>
   );
 };
