@@ -43,6 +43,16 @@ export const router = createBrowserRouter([
     ],
   },
   {
+    path: "/registrazione/:date",
+    element: <LayoutRoot />,
+    children: [  
+      {
+        index: true,
+        element: <Registrazione />,
+      },
+    ],
+  },
+  {
     path: "/registrazionecompletata",
     element: <LayoutRoot />,
     children: [  

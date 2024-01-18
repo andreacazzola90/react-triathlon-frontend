@@ -6,7 +6,7 @@ import { v4 } from "uuid";
 import * as yup from "yup";
 import HeaderTitle from "../components/HeaderTitle";
 import Logo from "../components/Logo";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 type IFormInput = {
   name?: string | undefined;
@@ -31,6 +31,7 @@ const schema = yup.object().shape({
 });
 
 export default function Registrazione() {
+  const { date } = useParams();
   const {
     register,
     handleSubmit,
@@ -192,13 +193,12 @@ export default function Registrazione() {
           <div className="md:w-2/3 d-block">
             <select
               id="registration-stage"
-              defaultValue={"Roma"}
+              defaultValue={date ? date : "Roma"}
               {...register("stage")}
-              className="select select-bordered border-black w-full"
+              className={`select select-bordered border-black w-full 
+              ${errors.stage && " !border-alert"}`}
             >
-              <option value="Roma" disabled>
-                Roma
-              </option>
+              <option value="Roma">Roma</option>
               <option value="Milano">Milano</option>
               <option value="Torino">Torino</option>
             </select>

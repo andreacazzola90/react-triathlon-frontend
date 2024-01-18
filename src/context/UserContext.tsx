@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-interface User
+export interface User
   extends IFormNegozioRetail,
     IFormPhotoboot,
     IFormTecnogym,
     IFormTryOn {
   id?: number;
   name?: string;
+  surname?: string;
   isLoggedIn?: boolean;
   dateOfBirth?: Date;
   weight?: number;

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import Property from "./Property";
+
 import Profile from "../utils/profilo-gare.json";
 import TableProperty from "./TableProperty";
+import { User } from "../context/UserContext";
 
 const UserProfile = ({ id }: { id: string }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<User>({});
   const apiUrl = import.meta.env.VITE_API_HOST + "users/" + id;
   useEffect(() => {
     if (id) {
