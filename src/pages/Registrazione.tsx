@@ -30,6 +30,24 @@ const schema = yup.object().shape({
     .oneOf([true], "La privacy deve essere accettata per proseguire."),
 });
 
+const dateGare = [
+  {
+    date: "11-07-2024",
+    key: "roma",
+    value: "Roma",
+  },
+  {
+    date: "11-07-2025",
+    key: "milano",
+    value: "Milano",
+  },
+  {
+    date: "11-07-2026",
+    key: "torino",
+    value: "Torino",
+  },
+];
+
 export default function Registrazione() {
   const { date } = useParams();
   const {
@@ -193,11 +211,20 @@ export default function Registrazione() {
           <div className="md:w-2/3 d-block">
             <select
               id="registration-stage"
-              defaultValue={date ? date : "Roma"}
+              defaultValue={
+                dateGare.find(
+                  (d) => d.key.toLowerCase() === date?.toLowerCase()
+                ) && date
+              }
               {...register("stage")}
               className={`select select-bordered border-black w-full 
               ${errors.stage && " !border-alert"}`}
             >
+              {dateGare.map((g, i) => (
+                <option value={g.key} key={i}>
+                  {g.value}
+                </option>
+              ))}
               <option value="Roma">Roma</option>
               <option value="Milano">Milano</option>
               <option value="Torino">Torino</option>
