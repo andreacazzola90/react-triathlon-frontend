@@ -5,8 +5,10 @@ import Navbar from "../components/Navbar";
 const LayoutRoot = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <div className="  ">
+          <Navbar />
+          <Outlet />
+      </div>
     </>
   );
 };

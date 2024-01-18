@@ -88,7 +88,7 @@ export default function Registrazione() {
 
       <form
         id="registrationForm"
-        className="w-full max-w-sm"
+        className="w-full max-w-sm px-5"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="md:flex md:items-center mb-6 form-group">

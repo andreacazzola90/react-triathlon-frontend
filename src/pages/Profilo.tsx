@@ -7,8 +7,7 @@ const Profilo = () => {
   const idUser: string = id ? id : "";
 
   return (
-    <main className="flex flex-col items-center">
-      <h1>Profilo {idUser}</h1>
+    <main className="">
       <UserProfile id={idUser} />
     </main>
   );
