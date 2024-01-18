@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/registrazionecompletata",
+    path: "/registrazione-completata",
     element: <LayoutRoot />,
     children: [  
       {

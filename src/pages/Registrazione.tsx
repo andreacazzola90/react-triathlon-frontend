@@ -88,7 +88,7 @@ export default function Registrazione() {
       .then((data) => {
         setCookie("isQrCodeView", true);
         console.log(data);
-        navigate("/registrazionecompletata");
+        navigate("/registrazione-completata");
       })
       .catch((error) => {
         console.error(error);

@@ -15,7 +15,7 @@ export default function Registrazione() {
   useEffect(() => {
     if (isQrCodeView == "true") {
       setShowQRCode(true);
-      //deleteCookie("isQrCodeView");
+      deleteCookie("isQrCodeView");
     } else {
       navigate("/registrazione");
     }
